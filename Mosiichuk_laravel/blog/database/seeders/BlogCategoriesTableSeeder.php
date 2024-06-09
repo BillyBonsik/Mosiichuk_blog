@@ -6,8 +6,6 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
-
-
 class BlogCategoriesTableSeeder extends Seeder
 {
     /**
@@ -15,7 +13,6 @@ class BlogCategoriesTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
         $categories = [];
 
         $cName = 'Без категорії';
@@ -37,6 +34,5 @@ class BlogCategoriesTableSeeder extends Seeder
         }
 
         DB::table('blog_categories')->insert($categories);
-        
     }
 }

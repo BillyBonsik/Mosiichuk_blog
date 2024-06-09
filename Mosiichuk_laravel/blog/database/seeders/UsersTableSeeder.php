@@ -14,7 +14,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
         $data = [
             [
                 'name' => 'Невідомий автор',
@@ -28,6 +27,5 @@ class UsersTableSeeder extends Seeder
             ],
         ];
         DB::table('users')->insert($data);
-
     }
 }

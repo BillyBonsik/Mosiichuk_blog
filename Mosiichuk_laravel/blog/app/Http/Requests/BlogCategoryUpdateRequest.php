@@ -21,6 +21,7 @@ class BlogCategoryUpdateRequest extends FormRequest
      */
     public function rules(): array
     {
+        
         return [
             'title' => 'required|min:5|max:200',
             'slug' => 'max:200',

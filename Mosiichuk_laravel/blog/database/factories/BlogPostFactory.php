@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\BlogPost>
  */
@@ -18,11 +17,12 @@ class BlogPostFactory extends Factory
     public function definition(): array
     {
         $title = $this->faker->sentence(rand(3, 8), true);
-        $txt = $this->faker->realText(rand(1000, 4000));
-        $date = $this->faker->dateTimeBetween('-3 months', '-2 months');
-        return [
-            //
-            'category_id'   => rand(1, 11),
+$txt = $this->faker->realText(rand(1000, 4000));
+$date = $this->faker->dateTimeBetween('-3 months', '-2 months');
+
+            return [
+
+                'category_id'   => rand(1, 11),
 
                 'user_id'       => (rand(1, 2) == 5) ? 1 : 2,
 
@@ -43,6 +43,7 @@ class BlogPostFactory extends Factory
                 'created_at'     => $date,
 
                 'updated_at'     => $date,
-        ];
+
+            ];
     }
 }
